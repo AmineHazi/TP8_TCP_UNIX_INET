@@ -6,6 +6,7 @@ Commencer
 Ces instructions vous aideront à mettre en place une copie du projet en cours d'exécution sur votre système local à des fins de développement et de test.
 
 ## Prérequis
+
 Pour compiler et exécuter ce projet, vous aurez besoin de :
 
 - GCC (GNU Compiler Collection)
@@ -13,13 +14,18 @@ Pour compiler et exécuter ce projet, vous aurez besoin de :
 
 ## Exécution
 
-## Pour exécuter le programme, il faut le compiler puis lancer le serveur et le client avec les commandes suivantes :
+Pour exécuter le programme, il faut le compiler puis lancer le serveur et le client avec les commandes suivantes :
 
 ```bash
 make
-./bin/server 
+./bin/server <dossier_des_fichiers>
 ./bin/client <adresse_ip_du_serveur> <taille_fenetre> <nom_fichier>
 ```
+## Organisation du projet 
+
+Il y'a deux répertoir pour le programme server et client chaque répertoir contient son Makfile pour compiler chaque programme, lors de l'éxecution du programme on donne au server le dossier files (ou autre si on veut envoyer d'autre fichier), le client créera un répertoire recieved ou il mettre le fichier réçu, le server créera un dossier logs ou il sauvgardera les logs des interaction avec les clients. Tout les executable se trouverons dans un dossier bin spécifique à chaque programme.
+
+(L'organisation se fait de manière automatique l'utilisateur ne doit rien créer tout se fait par les programmes) 
 
 ### Arrêter les clients et le serveur
 
