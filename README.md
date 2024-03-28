@@ -18,7 +18,7 @@ Pour compiler et exécuter ce projet, vous aurez besoin de :
 ```bash
 make
 ./bin/server 
-./bin/client 
+./bin/client <adresse_ip_du_serveur> <taille_fenetre> <nom_fichier>
 ```
 
 ### Arrêter les clients et le serveur
