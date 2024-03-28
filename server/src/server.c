@@ -97,6 +97,11 @@ int main(int argc, char *argv[]) {
     root_directory = argv[1];
     struct sockaddr_in server_addr;
 
+    sigset_t set;
+    sigfillset(&set);
+    pthread_sigmask(SIG_BLOCK, &set, NULL);
+
+    signal(SIGINT, signal_handler);
     signal(SIGINT, signal_handler);
 
     server_socket = socket(AF_INET, SOCK_STREAM, 0);
